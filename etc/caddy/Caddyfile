@@ -5,6 +5,11 @@ apt.woomy.ovh {
 	file_server
 }
 
+files.woomy.ovh www.files.woomy.ovh {
+	root * /home/woomy/files
+	file_server browse
+}
+
 gitea.woomy.ovh www.gitea.woomy.ovh {
 	reverse_proxy localhost:3000
 }
