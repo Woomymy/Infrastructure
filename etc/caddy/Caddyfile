@@ -1,12 +1,14 @@
+# Caddy Webserver config file
+
 apt.woomy.ovh {
 	root * /home/woomy/Services/Debian-repo
 	file_server
 }
 
-gitea.woomy.ovh {
+gitea.woomy.ovh www.gitea.woomy.ovh {
 	reverse_proxy localhost:3000
 }
 
-bitwarden.woomy.ovh {
+bitwarden.woomy.ovh www.bitwarden.woomy.ovh {
 	reverse_proxy localhost:8080
 }
