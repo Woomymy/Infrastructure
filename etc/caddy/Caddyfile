@@ -6,3 +6,7 @@ apt.woomy.ovh {
 gitea.woomy.ovh {
 	reverse_proxy localhost:3000
 }
+
+bitwarden.woomy.ovh {
+	reverse_proxy localhost:8080
+}
