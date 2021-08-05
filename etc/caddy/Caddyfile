@@ -2,3 +2,7 @@ apt.woomy.ovh {
 	root * /home/woomy/Services/Debian-repo
 	file_server
 }
+
+gitea.woomy.ovh {
+	reverse_proxy localhost:3000
+}
