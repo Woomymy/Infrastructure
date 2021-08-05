@@ -16,3 +16,8 @@ bitwarden.woomy.ovh www.bitwarden.woomy.ovh {
 nextcloud.woomy.ovh www.nextcloud.woomy.ovh {
 	reverse_proxy localhost:8000
 }
+
+deb.mocha-os.xyz {
+	root * /home/mochaos/files
+	file_server browse
+}
