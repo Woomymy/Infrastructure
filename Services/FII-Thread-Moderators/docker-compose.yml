@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  bot:
+        image: woomy4680/thread-limit-bot:1.0.3
+        container_name: thread_limit_bot
+        restart: always
+        env_file:
+          - ".env"
