@@ -6,7 +6,7 @@ apt.woomy.ovh {
 }
 
 files.woomy.ovh www.files.woomy.ovh {
-	root * /home/woomy/files
+	root * /home/woomy/Services/files.woomy.ovh
 	file_server browse
 }
 
