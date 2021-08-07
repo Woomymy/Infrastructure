@@ -26,7 +26,3 @@ rss.woomy.ovh www.rss.woomy.ovh {
 	reverse_proxy localhost:8888
 }
 
-deb.mocha-os.xyz {
-	root * /home/mochaos/files
-	file_server browse
-}
