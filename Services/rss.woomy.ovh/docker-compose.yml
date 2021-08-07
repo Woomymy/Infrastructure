@@ -1,0 +1,36 @@
+version: "3"
+networks:
+  rss_internal:
+    external: false
+
+services:
+  freshrss-db:
+    image: postgres:12-alpine
+    container_name: freshrss-db
+    hostname: freshrss-db
+    restart: unless-stopped
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    networks:
+      - rss_internal
+    env_file:
+      - ".env"
+
+  freshrss-app:
+    image: freshrss/freshrss:latest
+    container_name: freshrss-app
+    hostname: freshrss-app
+    restart: unless-stopped
+    ports:
+      - "8888:80"
+    networks:
+      - rss_internal
+    depends_on:
+      - freshrss-db
+    volumes:
+      - ./data:/var/www/FreshRSS/data
+      - ./extensions:/var/www/FreshRSS/extensions
+    environment:
+      CRON_MIN: '*/20'
+      TZ: Europe/Paris
+
