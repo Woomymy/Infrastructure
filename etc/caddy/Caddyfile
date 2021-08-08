@@ -19,6 +19,7 @@ bitwarden.woomy.ovh www.bitwarden.woomy.ovh {
 }
 
 nextcloud.woomy.ovh www.nextcloud.woomy.ovh {
+	header "Strict-Transport-Security" "max-age=15552000; includeSubDomains"
 	reverse_proxy localhost:8000
 }
 
