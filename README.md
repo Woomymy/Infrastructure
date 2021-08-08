@@ -10,4 +10,6 @@ Config files for .woomy.ovh sites
 
 - [VaultWarden](Services/bitwarden.woomy.ovh/)
 - [FII-Threads-Moderator](Services/FII-Threads-Moderator)
+- [FreshRSS](Services/rss.woomy.ovh)
+- [Nextcloud](Services/nextcloud.woomy.ovh)
 
