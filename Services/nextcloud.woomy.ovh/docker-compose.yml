@@ -10,7 +10,7 @@ services:
       - ".env"
   app:
     container_name: "nextcloud_app"
-    image: nextcloud:22.0.0
+    image: nextcloud:22.1.0
     restart: always
     ports:
       - 8000:80
