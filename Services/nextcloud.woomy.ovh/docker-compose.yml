@@ -1,0 +1,23 @@
+version: '3.2'
+
+services:
+  db:
+    image: postgres:13.3-alpine
+    restart: always
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    env_file:
+      - ".env"
+  app:
+    container_name: "nextcloud_app"
+    image: nextcloud:22.0.0
+    restart: always
+    ports:
+      - 8000:80
+    volumes:
+      - ./app:/var/www/html
+    env_file:
+      - ".env"
+    depends_on:
+      - db
+
