@@ -3,30 +3,31 @@ version: "3"
 networks:
   gitea:
     external: false
+
 services:
   gitea:
-        image: gitea/gitea:1.14.5
-        container_name: gitea
-        env_file:
-          - ".env"
-        restart: always
-        networks:
-          - gitea
-        volumes:
-                - ./gitea:/data
-                - /etc/timezone:/etc/timezone:ro
-                - /etc/localtime:/etc/localtime:ro
-        ports:
-                - "3000:3000"
-        depends_on:
-                - db
+    image: gitea/gitea:1.14.5
+    container_name: gitea
+    env_file:
+      - ".env"
+    restart: always
+    networks:
+      - gitea
+    volumes:
+      - ./gitea:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
 
   db:
-        image: postgres:13.3-alpine
-        restart: always
-        env_file:
-          - ".env"
-        networks:
-                - gitea
-        volumes:
-                - ./postgres:/var/lib/postgresql/data
+    image: postgres:13.3-alpine
+    restart: always
+    env_file:
+      - ".env"
+    networks:
+      - gitea
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
