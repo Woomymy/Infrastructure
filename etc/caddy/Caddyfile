@@ -9,6 +9,7 @@ apt.woomy.ovh {
 		root * /home/woomy/Services/Debian-repo
 		file_server browse {
 			index no.html
+			hide index.html
 		}
 	}
 }
