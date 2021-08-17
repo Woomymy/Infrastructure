@@ -1,8 +1,16 @@
 # Caddy Webserver config file
 
 apt.woomy.ovh {
-	root * /home/woomy/Services/Debian-repo
-	file_server
+	handle {
+		root * /home/woomy/Services/Debian-repo
+		file_server
+	}
+	handle_path /browser/* {
+		root * /home/woomy/Services/Debian-repo
+		file_server browse {
+			index no.html
+		}
+	}
 }
 
 files.woomy.ovh www.files.woomy.ovh {
@@ -26,4 +34,3 @@ nextcloud.woomy.ovh www.nextcloud.woomy.ovh {
 rss.woomy.ovh www.rss.woomy.ovh {
 	reverse_proxy localhost:8888
 }
-
