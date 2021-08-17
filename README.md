@@ -12,4 +12,5 @@ Config files for .woomy.ovh sites
 - [FII-Threads-Moderator](Services/FII-Threads-Moderator)
 - [FreshRSS](Services/rss.woomy.ovh)
 - [Nextcloud](Services/nextcloud.woomy.ovh)
+- [Gitea](Services/gitea.woomy.ovh)
 
