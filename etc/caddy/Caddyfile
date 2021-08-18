@@ -5,6 +5,9 @@ apt.woomy.ovh {
 		root * /home/woomy/Services/Debian-repo
 		file_server
 	}
+	handle /browser {
+		redir https://apt.woomy.ovh/browser/ permanent
+ 	}
 	handle_path /browser/* {
 		root * /home/woomy/Services/Debian-repo
 		file_server browse {
