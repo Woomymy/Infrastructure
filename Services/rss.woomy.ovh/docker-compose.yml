@@ -22,7 +22,7 @@ services:
     hostname: freshrss-app
     restart: unless-stopped
     ports:
-      - "8888:80"
+      - "127.0.0.1:8888:80"
     networks:
       - rss_internal
     depends_on:

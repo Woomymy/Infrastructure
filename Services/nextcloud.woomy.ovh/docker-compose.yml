@@ -13,7 +13,7 @@ services:
     image: nextcloud:22.1.0
     restart: always
     ports:
-      - 8000:80
+      - "127.0.0.1:8000:80"
     volumes:
       - ./app:/var/www/html
     env_file:
