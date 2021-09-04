@@ -1,0 +1,11 @@
+(log) {
+	log {
+		level error
+		output file /var/log/caddy/{args.0}_access.log {
+			roll_size 100mb
+			roll_keep 5
+			roll_keep_for 1m
+		}
+		format single_field common_log
+	}
+}

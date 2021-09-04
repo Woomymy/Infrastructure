@@ -1,6 +1,9 @@
 # Caddy Webserver config file
 
+import helpers/*
+
 apt.woomy.ovh {
+	import log apt.woomy.ovh
 	handle {
 		root * /home/woomy/Services/Debian-repo
 		file_server
