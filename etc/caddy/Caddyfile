@@ -21,23 +21,28 @@ apt.woomy.ovh {
 }
 
 files.woomy.ovh www.files.woomy.ovh {
+	import log files.woomy.ovh
 	root * /home/woomy/Services/files.woomy.ovh
 	file_server browse
 }
 
 gitea.woomy.ovh www.gitea.woomy.ovh {
+	import log gitea.woomy.ovh
 	reverse_proxy localhost:3000
 }
 
 bitwarden.woomy.ovh www.bitwarden.woomy.ovh {
+	import log bitwarden.woomy.ovh
 	reverse_proxy localhost:8080
 }
 
 nextcloud.woomy.ovh www.nextcloud.woomy.ovh {
+	import log nextcloud.woomy.ovh
 	header "Strict-Transport-Security" "max-age=15552000; includeSubDomains"
 	reverse_proxy localhost:8000
 }
 
 rss.woomy.ovh www.rss.woomy.ovh {
+	import log rss.woomy.ovh
 	reverse_proxy localhost:8888
 }
