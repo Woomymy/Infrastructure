@@ -22,8 +22,22 @@ apt.woomy.ovh {
 
 files.woomy.ovh www.files.woomy.ovh {
 	import log files.woomy.ovh
-	root * /home/woomy/Services/files.woomy.ovh
-	file_server browse
+	handle {
+		root * /home/woomy/Services/files.woomy.ovh
+		file_server browse
+	}
+	
+	handle /joplin_browser {
+		redir https://files.woomy.ovh/joplin_browser/ permanent
+	}
+	
+	handle_path /joplin_browser/* {
+		root * /home/woomy/Services/files.woomy.ovh/joplin_bin
+		file_server browse {
+			index no.html # To prevent rendering index
+			hide index.html
+		}
+	}
 }
 
 gitea.woomy.ovh www.gitea.woomy.ovh {
