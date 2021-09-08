@@ -1,0 +1,4 @@
+gitea.woomy.ovh www.gitea.woomy.ovh {
+        import log gitea.woomy.ovh
+        reverse_proxy localhost:3000
+}

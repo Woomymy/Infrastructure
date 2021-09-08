@@ -1,0 +1,4 @@
+bitwarden.woomy.ovh www.bitwarden.woomy.ovh {
+        import log bitwarden.woomy.ovh
+        reverse_proxy localhost:8080
+}

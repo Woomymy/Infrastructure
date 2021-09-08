@@ -1,0 +1,4 @@
+rss.woomy.ovh www.rss.woomy.ovh {
+        import log rss.woomy.ovh
+        reverse_proxy localhost:8888
+}

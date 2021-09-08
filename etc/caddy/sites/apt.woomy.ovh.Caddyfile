@@ -1,0 +1,17 @@
+apt.woomy.ovh {
+        import log apt.woomy.ovh
+        handle {
+                root * /home/woomy/Services/Debian-repo
+                file_server
+        }
+        handle /browser {
+                redir https://apt.woomy.ovh/browser/ permanent
+        }
+        handle_path /browser/* {
+                root * /home/woomy/Services/Debian-repo
+                file_server browse {
+                        index no.html
+                        hide index.html
+                }
+        }
+}
