@@ -8,6 +8,8 @@ services:
       - ./db:/var/lib/postgresql/data
     env_file:
       - ".env"
+  redis:
+    image: "redis:6.2.5-alpine"
   app:
     container_name: "nextcloud_app"
     image: nextcloud:22.1.1
