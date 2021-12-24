@@ -6,7 +6,7 @@ networks:
 
 services:
   gitea:
-    image: gitea/gitea:1.15.6-rootless
+    image: gitea/gitea:1.15.8-rootless
     container_name: gitea
     env_file:
       - ".env"
